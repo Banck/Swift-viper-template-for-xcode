@@ -6,3 +6,7 @@ Go to Application folder, browse to the Xcode application icon. Right-click it a
 
 ## Generated code
 This template generates all files that you need to create a new VIPER module.
+To create new module just call createModule()  static method, which returns viewController, from module Configurator. Example:
+```
+let vc = LoginConfigurator.createModule()
+```
