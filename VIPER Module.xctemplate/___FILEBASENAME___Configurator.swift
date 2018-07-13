@@ -12,12 +12,12 @@ import UIKit
 
 struct ___VARIABLE_productName:identifier___Configurator {
 
-	static func createModule() -> UIViewController{
+	static func createModule() -> UIViewController {
         var view: ___VARIABLE_productName:identifier___ViewController!
 
-        let viewController = UIStoryboard.init(name: "___VARIABLE_productName:identifier___", bundle: Bundle.main).instantiateInitialViewController()!
+        let viewController = UIStoryboard.init(name: "___VARIABLE_productName:identifier___", bundle: Bundle.main).instantiateInitialViewController()
         if viewController == nil {
-            fatalError("Failed to load a viewController from Storyboard")
+            fatalError("Seems there is no initial view controller in ___VARIABLE_productName:identifier___.storyboard")
         }
 
         if viewController is UINavigationController {
@@ -34,6 +34,6 @@ struct ___VARIABLE_productName:identifier___Configurator {
         interactor.presenter = presenter
         router.viewController = view
         
-        return viewController
+        return viewController!
     }
 }
