@@ -10,3 +10,6 @@ To create new module just call createModule()  static method, which returns UIVi
 ```
 let vc = LoginConfigurator.createModule()
 ```
+
+## Example project
+The example project you can find here: https://github.com/Banck/Weather-VIPER-example
