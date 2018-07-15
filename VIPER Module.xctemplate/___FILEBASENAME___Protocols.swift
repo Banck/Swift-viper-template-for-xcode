@@ -24,7 +24,23 @@ protocol ___VARIABLE_productName:identifier___WireframeInterface: class {
 protocol ___VARIABLE_productName:identifier___PresenterInterface: class {
 
     var interactor: ___VARIABLE_productName:identifier___InteractorInput? { get set }
+    
+    // MARK: - Lifecycle -
+    func viewDidLoad()
+    func viewWillAppear()
+    func viewDidAppear()
+    func viewWillDisappear()
+    func viewDidDisappear()
+
 }
+extension ___VARIABLE_productName:identifier___PresenterInterface {
+    func viewDidLoad() {/*leaves this empty*/}
+    func viewWillAppear() {/*leaves this empty*/}
+    func viewDidAppear() {/*leaves this empty*/}
+    func viewWillDisappear() {/*leaves this empty*/}
+    func viewDidDisappear() {/*leaves this empty*/}
+}
+
 
 //MARK: Interactor -
 protocol ___VARIABLE_productName:identifier___InteractorOutput: class {

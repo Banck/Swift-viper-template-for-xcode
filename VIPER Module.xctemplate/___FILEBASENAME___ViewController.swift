@@ -11,9 +11,10 @@
 import UIKit
 
 class ___VARIABLE_productName:identifier___ViewController: UIViewController {
-
+    // MARK: - Properties
 	var presenter: ___VARIABLE_productName:identifier___PresenterInterface?
 
+    // MARK: - Lifecycle -
 	override func viewDidLoad() {
         super.viewDidLoad()
     }

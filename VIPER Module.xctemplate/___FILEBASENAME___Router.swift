@@ -11,7 +11,7 @@
 import UIKit
 
 class ___VARIABLE_productName:identifier___Router {
-
+    // MARK: - Properties
     weak var viewController: UIViewController?
 }
 

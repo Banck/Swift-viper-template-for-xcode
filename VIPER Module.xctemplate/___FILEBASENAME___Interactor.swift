@@ -11,6 +11,9 @@
 import UIKit
 
 class ___VARIABLE_productName:identifier___Interactor: ___VARIABLE_productName:identifier___InteractorInput {
-
+    // MARK: - Properties
     weak var presenter: ___VARIABLE_productName:identifier___InteractorOutput?
+    
+    // MARK: - ___VARIABLE_productName:identifier___InteractorInput -
+
 }
