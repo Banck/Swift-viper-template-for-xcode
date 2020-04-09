@@ -14,7 +14,7 @@ import UIKit
 struct ___VARIABLE_productName:identifier___Configurator {
 
 	static func createModule() -> UIViewController {
-        var view: ___VARIABLE_productName:identifier___ViewController!
+        var view: ___VARIABLE_productName:identifier___ViewController
 
         let viewController = UIStoryboard.init(name: "___VARIABLE_productName:identifier___", bundle: Bundle.main).instantiateInitialViewController()
         if viewController == nil {
