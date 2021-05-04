@@ -11,30 +11,30 @@
 
 import Foundation
 
-//MARK: Wireframe -
-enum ___VARIABLE_productName:identifier___NavigationOption {
-    //    case firstModule
-    //    case secondModule(someData)
+// MARK: - Wireframe
+enum ___VARIABLE_moduleName___NavigationOption {
+//    case firstModule
+//    case secondModule(someData)
 }
 
-protocol ___VARIABLE_productName:identifier___WireframeInterface: class {
-    func navigate(to option: ___VARIABLE_productName:identifier___NavigationOption)
+protocol ___VARIABLE_moduleName___WireframeInterface: AnyObject {
+    func navigate(to option: ___VARIABLE_moduleName___NavigationOption)
 }
 
-//MARK: Presenter -
-protocol ___VARIABLE_productName:identifier___PresenterInterface: class {
-
-    var interactor: ___VARIABLE_productName:identifier___InteractorInput? { get set }
+// MARK: - Presenter
+protocol ___VARIABLE_moduleName___PresenterInterface: AnyObject {
     
-    // MARK: - Lifecycle -
+    var interactor: ___VARIABLE_moduleName___InteractorInput? { get set }
+    
+    // MARK: - Lifecycle
     func viewDidLoad()
     func viewWillAppear()
     func viewDidAppear()
     func viewWillDisappear()
     func viewDidDisappear()
-
 }
-extension ___VARIABLE_productName:identifier___PresenterInterface {
+
+extension ___VARIABLE_moduleName___PresenterInterface {
     func viewDidLoad() {/*leaves this empty*/}
     func viewWillAppear() {/*leaves this empty*/}
     func viewDidAppear() {/*leaves this empty*/}
@@ -42,24 +42,23 @@ extension ___VARIABLE_productName:identifier___PresenterInterface {
     func viewDidDisappear() {/*leaves this empty*/}
 }
 
-
-//MARK: Interactor -
-protocol ___VARIABLE_productName:identifier___InteractorOutput: class {
-
+// MARK: - Interactor
+protocol ___VARIABLE_moduleName___InteractorOutput: AnyObject {
+    
     /* Interactor -> Presenter */
 }
 
-protocol ___VARIABLE_productName:identifier___InteractorInput: class {
-
-    var presenter: ___VARIABLE_productName:identifier___InteractorOutput?  { get set }
-
+protocol ___VARIABLE_moduleName___InteractorInput: AnyObject {
+    
+    var presenter: ___VARIABLE_moduleName___InteractorOutput? { get set }
+    
     /* Presenter -> Interactor */
 }
 
-//MARK: View -
-protocol ___VARIABLE_productName:identifier___View: class {
-
-    var presenter: ___VARIABLE_productName:identifier___PresenterInterface?  { get set }
-
+// MARK: - View
+protocol ___VARIABLE_moduleName___View: AnyObject {
+    
+    var presenter: ___VARIABLE_moduleName___PresenterInterface? { get set }
+    
     /* Presenter -> ViewController */
 }

@@ -9,12 +9,12 @@
 //  https://github.com/Banck/Swift-viper-template-for-xcode
 //
 
-import UIKit
+import Foundation
 
-class ___VARIABLE_productName:identifier___Interactor: ___VARIABLE_productName:identifier___InteractorInput {
-    // MARK: - Properties
-    weak var presenter: ___VARIABLE_productName:identifier___InteractorOutput?
+final class ___VARIABLE_moduleName___Interactor: ___VARIABLE_moduleName___InteractorInput {
     
-    // MARK: - ___VARIABLE_productName:identifier___InteractorInput -
-
+    // MARK: - Properties
+    weak var presenter: ___VARIABLE_moduleName___InteractorOutput?
+    
+    // MARK: - ___VARIABLE_moduleName___InteractorInput
 }

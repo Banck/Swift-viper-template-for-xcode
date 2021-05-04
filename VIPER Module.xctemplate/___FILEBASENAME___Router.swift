@@ -11,20 +11,21 @@
 
 import UIKit
 
-class ___VARIABLE_productName:identifier___Router {
+final class ___VARIABLE_moduleName___Router {
+    
     // MARK: - Properties
     weak var viewController: UIViewController?
 }
 
-// MARK: - ___VARIABLE_productName:identifier___WireframeInterface -
-extension ___VARIABLE_productName:identifier___Router: ___VARIABLE_productName:identifier___WireframeInterface {
+// MARK: - ___VARIABLE_moduleName___WireframeInterface
+extension ___VARIABLE_moduleName___Router: ___VARIABLE_moduleName___WireframeInterface {
     
-    func navigate(to option: ___VARIABLE_productName:identifier___NavigationOption) {
+    func navigate(to option: ___VARIABLE_moduleName___NavigationOption) {
 //        switch option {
 //        case .firstModule:
-//              openFirstModule()
+//            openFirstModule()
 //        case .secondModule(let someData):
-        //      openSecondModule(with someData)
+//            openSecondModule(with someData)
 //        }
     }
 }

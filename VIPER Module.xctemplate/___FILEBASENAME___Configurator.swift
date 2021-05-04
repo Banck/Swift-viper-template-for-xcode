@@ -11,30 +11,33 @@
 
 import UIKit
 
-struct ___VARIABLE_productName:identifier___Configurator {
-
-	static func createModule() -> UIViewController {
-        var view: ___VARIABLE_productName:identifier___ViewController
-
-        let viewController = UIStoryboard.init(name: "___VARIABLE_productName:identifier___", bundle: Bundle.main).instantiateInitialViewController()
-        if viewController == nil {
-            fatalError("Seems there is no initial view controller in ___VARIABLE_productName:identifier___.storyboard")
+struct ___VARIABLE_moduleName___Configurator {
+    
+    static func createModule() -> UIViewController {
+        let storyboard = UIStoryboard(name: "___VARIABLE_moduleName___", bundle: Bundle.main)
+        guard let storyboardViewController = storyboard.instantiateInitialViewController() else {
+            fatalError("___VARIABLE_moduleName___.storyboard has no initial view controller")
         }
-
-        if viewController is UINavigationController {
-            view = (viewController as! UINavigationController).viewControllers.first as! ___VARIABLE_productName:identifier___ViewController
+        
+        let viewController: UIViewController?
+        if storyboardViewController is UINavigationController {
+            viewController = (storyboardViewController as? UINavigationController)?.viewControllers.first
         } else {
-            view = viewController as! ___VARIABLE_productName:identifier___ViewController
+            viewController = storyboardViewController
         }
-
-        let interactor = ___VARIABLE_productName:identifier___Interactor()
-        let router = ___VARIABLE_productName:identifier___Router()
-        let presenter = ___VARIABLE_productName:identifier___Presenter(interface: view, interactor: interactor, router: router)
+        
+        guard let view = viewController as? ___VARIABLE_moduleName___ViewController else {
+            fatalError("Failed to cast to ___VARIABLE_moduleName___ViewController")
+        }
+        
+        let interactor = ___VARIABLE_moduleName___Interactor()
+        let router = ___VARIABLE_moduleName___Router()
+        let presenter = ___VARIABLE_moduleName___Presenter(interface: view, interactor: interactor, router: router)
         
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view
         
-        return viewController!
+        return view
     }
 }
