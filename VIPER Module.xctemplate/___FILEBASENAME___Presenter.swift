@@ -21,7 +21,8 @@ final class ___VARIABLE_moduleName___Presenter {
     // MARK: - Initialization and deinitialization
     init(interface: ___VARIABLE_moduleName___View,
          interactor: ___VARIABLE_moduleName___InteractorInput?,
-         router: ___VARIABLE_moduleName___WireframeInterface) {
+         router: ___VARIABLE_moduleName___WireframeInterface)
+    {
         self.view = interface
         self.interactor = interactor
         self.router = router

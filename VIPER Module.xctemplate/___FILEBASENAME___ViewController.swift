@@ -11,18 +11,28 @@
 
 import UIKit
 
-final class ___VARIABLE_moduleName___ViewController: UIViewController {
-    
+class ___VARIABLE_productName:identifier___ViewController: UIViewController {
+
     // MARK: - Properties
-    var presenter: ___VARIABLE_moduleName___PresenterInterface?
-    
-    // MARK: - Lifecycle
-    override func viewDidLoad() {
+	var presenter: ___VARIABLE_productName:identifier___PresenterInterface?
+
+    // MARK: - Lifecycle -
+	override func viewDidLoad() {
         super.viewDidLoad()
+        configureUI()
+        presenter?.viewDidLoad()
     }
 }
 
-// MARK: - ___VARIABLE_moduleName___View
-extension ___VARIABLE_moduleName___ViewController: ___VARIABLE_moduleName___View {
-    
+// MARK: - UI Configuration
+extension ___VARIABLE_productName:identifier___ViewController {
+
+    private func configureUI() {
+        
+    }
+}
+
+// MARK: - ___VARIABLE_productName:identifier___View
+extension ___VARIABLE_productName:identifier___ViewController: ___VARIABLE_productName:identifier___View {
+
 }
