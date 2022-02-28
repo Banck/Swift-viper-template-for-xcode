@@ -14,14 +14,15 @@ import UIKit
 struct ___VARIABLE_moduleName___Configurator {
     
     static func createModule() -> UIViewController {
-        let storyboard = UIStoryboard(name: "___VARIABLE_moduleName___", bundle: Bundle.main)
+        let storyboard = UIStoryboard(name: "___VARIABLE_moduleName___",
+                                      bundle: Bundle.main)
         guard let storyboardViewController = storyboard.instantiateInitialViewController() else {
             fatalError("___VARIABLE_moduleName___.storyboard has no initial view controller")
         }
         
         let viewController: UIViewController?
-        if storyboardViewController is UINavigationController {
-            viewController = (storyboardViewController as? UINavigationController)?.viewControllers.first
+        if let navController = storyboardViewController as? UINavigationController {
+            viewController = navController.viewControllers.first
         } else {
             viewController = storyboardViewController
         }
@@ -32,7 +33,9 @@ struct ___VARIABLE_moduleName___Configurator {
         
         let interactor = ___VARIABLE_moduleName___Interactor()
         let router = ___VARIABLE_moduleName___Router()
-        let presenter = ___VARIABLE_moduleName___Presenter(interface: view, interactor: interactor, router: router)
+        let presenter = ___VARIABLE_moduleName___Presenter(interface: view,
+                                                           interactor: interactor,
+                                                           router: router)
         
         view.presenter = presenter
         interactor.presenter = presenter
