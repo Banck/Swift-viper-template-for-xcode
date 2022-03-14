@@ -12,14 +12,14 @@
 import UIKit
 
 final class ___VARIABLE_moduleName___Router {
-    
+
     // MARK: - Properties
     weak var viewController: UIViewController?
 }
 
 // MARK: - ___VARIABLE_moduleName___WireframeInterface
 extension ___VARIABLE_moduleName___Router: ___VARIABLE_moduleName___WireframeInterface {
-    
+
     func navigate(to option: ___VARIABLE_moduleName___NavigationOption) {
 //        switch option {
 //        case .firstModule:
