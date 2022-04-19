@@ -25,8 +25,6 @@ protocol ___VARIABLE_moduleName___WireframeInterface: AnyObject {
 // MARK: - Presenter
 protocol ___VARIABLE_moduleName___PresenterInterface: AnyObject {
 
-    var interactor: ___VARIABLE_moduleName___InteractorInput? { get set }
-
     // MARK: - Lifecycle
     func viewDidLoad()
     func viewWillAppear()
